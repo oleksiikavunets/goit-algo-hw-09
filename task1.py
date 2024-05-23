@@ -76,7 +76,7 @@ print('Динамічне програмування:\n', change)
 print('Час виконання: ', time.time() - start)
 print('=' * 20)
 
-amount = 123123
+amount = 123123123123123
 print('Решта: ', amount)
 
 start = time.time()
