@@ -1,4 +1,4 @@
-import timeit
+import time
 from collections import defaultdict
 
 
@@ -34,7 +34,58 @@ def find_min_coins(coins: list, change: int, result=None):
 
 coins = [50, 25, 10, 5, 2, 1]
 
-greedy_result = timeit.timeit(lambda: find_coins_greedy(coins, 52138), number=1000000)
-dynamic_result = timeit.timeit(lambda: find_min_coins(coins, 52138), number=1000000)
-print('Greedy: ', greedy_result)
-print('Dynamic:', dynamic_result)
+amount = 123123
+print('Решта: ', amount)
+
+start = time.time()
+change = find_coins_greedy(coins, amount)
+print('Жадібний алгоритм:\n', change)
+print('Час виконання: ', time.time() - start)
+
+start = time.time()
+change = find_min_coins(coins, amount)
+print('Динамічне програмування:\n', change)
+print('Час виконання: ', time.time() - start)
+print('=' * 20)
+
+amount = 123123123
+print('Решта: ', amount)
+
+start = time.time()
+change = find_coins_greedy(coins, amount)
+print('Жадібний алгоритм:\n', change)
+print('Час виконання: ', time.time() - start)
+
+start = time.time()
+change = find_min_coins(coins, amount)
+print('Динамічне програмування:\n', change)
+print('Час виконання: ', time.time() - start)
+print('=' * 20)
+
+amount = 123123123123
+print('Решта: ', amount)
+
+start = time.time()
+change = find_coins_greedy(coins, amount)
+print('Жадібний алгоритм:\n', change)
+print('Час виконання: ', time.time() - start)
+
+start = time.time()
+change = find_min_coins(coins, amount)
+print('Динамічне програмування:\n', change)
+print('Час виконання: ', time.time() - start)
+print('=' * 20)
+
+amount = 123123
+print('Решта: ', amount)
+
+start = time.time()
+change = find_coins_greedy(coins, amount)
+print('Жадібний алгоритм:\n', change)
+print('Час виконання: ', time.time() - start)
+
+start = time.time()
+change = find_min_coins(coins, amount)
+print('Динамічне програмування:\n', change)
+print('Час виконання: ', time.time() - start)
+print('=' * 20)
